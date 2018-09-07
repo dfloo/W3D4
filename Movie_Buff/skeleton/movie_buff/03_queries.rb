@@ -17,13 +17,19 @@ def golden_age
     .limit(1)
     .pluck(:yr).first
 end
-# .group('"(yr - (yr % 10))" AS decade')
+.group('"(yr - (yr % 10))" AS decade')
 # return 1920
 
 def costars(name)
   # List the names of the actors that the named actor has ever
   # appeared with.
   # Hint: use a subquery
+  
+  Actor
+    .select(:name)
+    .where()
+    
+    
 
 end
 
